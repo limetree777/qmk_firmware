@@ -24,3 +24,6 @@ NKRO_ENABLE = yes
 DEBOUNCE_TYPE = sym_eager_pk
 WPM_ENABLE = yes
 CAPS_WORD_ENABLE = yes
+COMBO_ENABLE = yes
+
+CONVERT_TO = liatris
