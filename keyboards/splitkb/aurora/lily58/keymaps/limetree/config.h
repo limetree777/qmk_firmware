@@ -38,5 +38,9 @@
 #define SPLIT_WPM_ENABLE
 #define SPLIT_TRANSPORT_MIRROR
 
+// Configure the global tapping term (default: 200ms)
+#define TAPPING_TERM 200
+// Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
+#define QUICK_TAP_TERM 0
 
 #define MOUSE_KEY_INTERVAL 1

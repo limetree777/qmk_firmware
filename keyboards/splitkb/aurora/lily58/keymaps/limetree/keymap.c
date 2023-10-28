@@ -26,6 +26,18 @@ enum layer_number {
   _ADJUST,
 };
 
+// Left-hand home row mods
+#define HOME_A LGUI_T(KC_A)
+#define HOME_S LALT_T(KC_S)
+#define HOME_D LCTL_T(KC_D)
+#define HOME_F LSFT_T(KC_F)
+
+// Right-hand home row mods
+#define HOME_J RSFT_T(KC_J)
+#define HOME_K LCTL_T(KC_K)
+#define HOME_L RALT_T(KC_L)
+#define HOME_SCLN RGUI_T(KC_SCLN)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	/* DEFAULT
  * ,-----------------------------------------.                    ,-----------------------------------------.
@@ -33,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  -   |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LCTRL |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  '   |
+ * |LCtrl | A_g  | S_a  | D_c  | F_s  |   G  |-------.    ,-------|   H  | J_s  | K_c  | L_a  | ;_g  |  '   |
  * |------+------+------+------+------+------|   [   |    |    ]  |------+------+------+------+------+------|
  * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |RShift|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
@@ -42,10 +54,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'           '------''--------------------'
  */
     [_DEFAULT] = LAYOUT(
-  KC_ESC,   KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSLS,
-  KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_MINS,
-  KC_LCTL,  KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                     KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
-  KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B, KC_BTN1,  KC_BTN2,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,  KC_RSFT,
+  KC_ESC,   KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                     KC_6,    KC_7,    KC_8,    KC_9,     KC_0,    KC_BSLS,
+  KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,     KC_P,    KC_MINS,
+  KC_LCTL,HOME_A, HOME_S,  HOME_D,  HOME_F,    KC_G,                     KC_H,  HOME_J,  HOME_K,  HOME_L,HOME_SCLN,    KC_QUOT,
+  KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B, KC_BTN1,  KC_BTN2,  KC_N,    KC_M, KC_COMM,  KC_DOT,  KC_SLSH,    KC_RSFT,
                       KC_LGUI, KC_LALT, MO(_LOWER), KC_SPC,        KC_ENT, MO(_RAISE), KC_BSPC, KC_LALT
 ),
     
@@ -120,7 +132,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 //combo keys
-const uint16_t PROGMEM bspc_combo1[] = {KC_J, KC_K, COMBO_END};
+const uint16_t PROGMEM bspc_combo1[] = {HOME_J,  HOME_K, COMBO_END};
 const uint16_t PROGMEM change_language_combo1[] = {KC_LSFT, KC_SPC, COMBO_END};
 
 
