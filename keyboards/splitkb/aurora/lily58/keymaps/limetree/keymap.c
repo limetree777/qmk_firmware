@@ -38,6 +38,7 @@ enum layer_number {
 #define HOME_L RALT_T(KC_L)
 #define HOME_SCLN RGUI_T(KC_SCLN)
 
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	/* DEFAULT
  * ,-----------------------------------------.                    ,-----------------------------------------.
@@ -89,7 +90,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   * ,-----------------------------------------.                    ,-----------------------------------------.
  * |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |                    |  F7  |  F8  |  F9  | F10  | F11  | F12  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |   '  |  <   |  >   |  @   |   .  |                    |   &  |      |   [  |   ]  |  %   |      |
+ * |      |   '  |  <   |  >   |  @   |   .  |                    |   &  |   `  |   [  |   ]  |  %   |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |   !  |   -  |   +  |   =  |  #   |-------.    ,-------|   |  |   :  |   (  |  )   |  ?   |      |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
@@ -101,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_RAISE] = LAYOUT(
   KC_F1,   KC_F2,   KC_F3,    KC_F4,    KC_F5,    KC_F6,                     KC_F7,    KC_F8,    KC_F9,    KC_F10,    KC_F11,    KC_F12,
-  KC_TRNS, KC_QUOT, KC_LT,    KC_GT,    KC_AT,    KC_DOT,                    KC_AMPR,  KC_TRNS,  KC_LBRC,  KC_RBRC,   KC_PERC,   KC_TRNS,
+  KC_TRNS, KC_QUOT, KC_LT,    KC_GT,    KC_AT,    KC_DOT,                    KC_AMPR,  KC_GRV,   KC_LBRC,  KC_RBRC,   KC_PERC,   KC_TRNS,
   KC_TRNS, KC_EXLM, KC_PMNS,  KC_PPLS,  KC_EQL,   KC_HASH,                   KC_PIPE,  KC_COLN,  KC_LPRN,  KC_RPRN,   KC_QUES,   KC_TRNS,
   KC_TRNS, KC_CIRC, KC_PSLS,  KC_ASTR,  KC_CIRC,  KC_TRNS, KC_TRNS,  KC_TRNS,KC_TILD,  KC_DLR,   KC_LCBR,  KC_RCBR,   KC_AT,     KC_TRNS,
                         KC_TRNS, KC_TRNS, MO(_ADJUST), KC_TRNS,              KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS
