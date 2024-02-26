@@ -33,7 +33,7 @@ enum layer_number {
 #define HOME_V LSFT_T(KC_V)
 
 // Right-hand home row mods
-#define HOME_M LSFT_T(KC_M)
+#define HOME_M RSFT_T(KC_M)
 #define HOME_COMM LCTL_T(KC_COMM)
 #define HOME_DOT RALT_T(KC_DOT)
 #define HOME_SLSH RGUI_T(KC_SLSH)
