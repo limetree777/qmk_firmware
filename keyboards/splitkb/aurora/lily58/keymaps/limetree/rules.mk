@@ -27,3 +27,5 @@ CAPS_WORD_ENABLE = yes
 COMBO_ENABLE = yes
 
 CONVERT_TO = liatris
+
+SRC += features/select_word.c
