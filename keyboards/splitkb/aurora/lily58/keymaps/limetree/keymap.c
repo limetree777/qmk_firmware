@@ -42,7 +42,7 @@ enum layer_number {
 
 //combo keys
 const uint16_t PROGMEM bspc_combo[] = {KC_J,  KC_K, COMBO_END};
-const uint16_t PROGMEM change_language_combo[] = {KC_SPC,  KC_LSFT, COMBO_END};
+const uint16_t PROGMEM change_language_combo[] = {LT(_MOUSE, KC_SPC),  KC_LSFT, COMBO_END};
 const uint16_t PROGMEM tab_combo[] = {KC_D,  KC_F, COMBO_END};
 const uint16_t PROGMEM esc_combo[] = {KC_E,  KC_R, COMBO_END};
 const uint16_t PROGMEM space_combo[] = {HOME_C,  HOME_V, COMBO_END};
