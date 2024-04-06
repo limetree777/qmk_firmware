@@ -44,3 +44,4 @@
 #define QUICK_TAP_TERM 0
 
 #define MOUSE_KEY_INTERVAL 1
+#define MOUSEKEY_MAX_SPEED 8

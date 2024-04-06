@@ -42,7 +42,7 @@ enum layer_number {
 
 //combo keys
 const uint16_t PROGMEM bspc_combo[] = {KC_J,  KC_K, COMBO_END};
-const uint16_t PROGMEM change_language_combo[] = {LT(_MOUSE, KC_SPC),  KC_LSFT, COMBO_END};
+const uint16_t PROGMEM change_language_combo[] = {LT(_MOUSE, KC_SPC),  LSFT_T(KC_ENT), COMBO_END};
 const uint16_t PROGMEM tab_combo[] = {KC_D,  KC_F, COMBO_END};
 const uint16_t PROGMEM esc_combo[] = {KC_E,  KC_R, COMBO_END};
 const uint16_t PROGMEM space_combo[] = {HOME_C,  HOME_V, COMBO_END};
@@ -89,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |LShift|  *Z  |  *X  |  *C  |  *V  |    B   |-----|    |-------|   N  |  *M  |  *,  |  *.  |  +/  |RShift|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LGUI | RALT |LOWER | /Space  /       \ LSFT \  |RAISE |BackSP| RCTL |
- *                   |      |      |      |/(mouse)/         \      \ |      |      |      |
+ *                   |      |      |      |/(mouse)/         \(enter\ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
     [_DEFAULT] = LAYOUT(
@@ -97,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                               KC_Y,    KC_U,    KC_I,    KC_O,     KC_P,    KC_MINS,
   KC_LCTL,  KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                               KC_H,    KC_J,    KC_K,    KC_L,     KC_SCLN, KC_QUOT,
   KC_LSFT,  HOME_Z, HOME_X,  HOME_C,  HOME_V,  KC_B,      KC_BTN1,       KC_BTN2,  KC_N,    HOME_M,  HOME_COMM,HOME_DOT,HOME_SLSH,KC_RSFT,
-             KC_LGUI, KC_RALT, MO(_LOWER), LT(_MOUSE, KC_SPC),          KC_LSFT, MO(_RAISE), KC_BSPC, KC_LALT
+             KC_LGUI, KC_RALT, MO(_LOWER), LT(_MOUSE, KC_SPC),       LSFT_T(KC_ENT), MO(_RAISE), KC_BSPC, KC_LALT
 ),
     
 
